@@ -35,7 +35,7 @@ One interesting implementation is this algorithm to compute fibonacci sequences 
 
 It's also worth noting that I've implemented brute force search recursively here as opposed to the iterative approach in the Java [source](https://github.com/dev-xero/java-algorithms-exercise-practice/blob/main/src/PracticeAlgorithms.java)
 ```python3
-    def brute_fore_search(key: int, the_array: [int], index: int) -> int:
+    def brute_force_search(key: int, the_array: [int], index: int) -> int:
         """Returns the index of the key if present, otherwise -1 using brute force search"""
         if index == len(the_array):
             return -1
@@ -43,7 +43,7 @@ It's also worth noting that I've implemented brute force search recursively here
         if the_array[index] == key:
             return index
 
-        return brute_fore_search(key, the_array, index + 1)
+        return brute_force_search(key, the_array, index + 1)
 ```
 
 ## Java Implementation
