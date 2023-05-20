@@ -65,7 +65,7 @@ def to_binary_string(n: int) -> str:
 
 
 def print_two_dm_boolean_array(the_array: [[bool]]) -> None:
-    """Prints the content of a boolean two-dimensional array, '*' for true and ' ' otherwise"""
+    """Prints the contents of a boolean two-dimensional array, '*' for true and ' ' otherwise"""
     for row in the_array:
         for col in row:
             if col:
@@ -81,7 +81,7 @@ def print_two_dm_boolean_array(the_array: [[bool]]) -> None:
 
 
 def print_two_dm_int_array(the_array: [[int]]) -> None:
-    """Prints the formatted contents of an int two-dimensional array"""
+    """Prints the formatted contents of a two-dimensional int array"""
     for row in the_array:
         for col in row:
             print(f'[{col}]', end="")
