@@ -1,5 +1,5 @@
 # Python Algorithms Exercise Practice
-Exercise solutions for chapter 1.1 written in Python
+🐍 Exercise solutions for chapter 1.1 written in Python
 
 ## Algorithms Implemented
 1. is_between_zero_and_one()
