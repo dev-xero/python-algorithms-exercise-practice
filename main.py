@@ -130,6 +130,7 @@ def lg(n: float) -> int:
 
 
 def fact(n: int) -> int:
+    """Returns the computed factorial of an integer"""
     if n == 1:
         return 1
 
