@@ -8,6 +8,12 @@
 # ---------------------------------------------------------------------------------------------------------
 
 
+import random as generator
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 def is_between_zero_and_one(x: float, y: float) -> bool:
     """Return true if the floats x and y exist between 0 and 1 else otherwise"""
     return (0 < x < 1) and (0 < y < 1)
@@ -64,6 +70,22 @@ def print_int_array(the_array: [int]) -> None:
 # ---------------------------------------------------------------------------------------------------------
 
 
+def matrix_transposition(the_matrix: [[int]]) -> [[int]]:
+    rows = len(the_matrix)
+    cols = len(the_matrix[0])  # the number of columns remain constant
+
+    transposed_matrix = [[0] * rows for _ in range(cols)]
+
+    for i in range(cols):
+        for j in range(rows):
+            transposed_matrix[i][j] = the_matrix[j][i]
+
+    return transposed_matrix
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 def main():
     """For testing"""
     test_x: float = 0.1
@@ -80,6 +102,11 @@ def main():
         [6, 5, 2]
     ]
 
+    test_int_matrix = [[0] * 2 for _ in range(3)]
+    for i in range(3):
+        for j in range(2):
+            test_int_matrix[i][j] = generator.randint(0, 9)
+
     test_int_array = [5, 7, 6, 9, 3, 8, 2, 4, 1, 10]
 
     print(is_between_zero_and_one(test_x, test_y))
@@ -94,6 +121,14 @@ def main():
 
     print_int_array(test_int_array)
     print()
+
+    print()
+    print("- Matrix")
+    print_two_dm_int_array(test_int_matrix)
+
+    print()
+    print("- Transposition")
+    print_two_dm_int_array(matrix_transposition(test_int_matrix))
 
 
 # ---------------------------------------------------------------------------------------------------------
