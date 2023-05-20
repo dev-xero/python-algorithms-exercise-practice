@@ -1,3 +1,10 @@
+# code based on https://github.com/dev-xero/java-algorithms-exercise-practice
+
+"""main.py
+    Python code implementation of some exercises presented in chapter 1.1
+    of the algorithms book
+"""
+
 # ---------------------------------------------------------------------------------------------------------
 
 
