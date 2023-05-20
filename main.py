@@ -14,8 +14,25 @@ import random as generator
 # ---------------------------------------------------------------------------------------------------------
 
 
+class Fibonacci:
+    """Class containing two implementations of fibonacci sequence sum algorithms"""
+    @staticmethod
+    def fib(n: int) -> int:
+        """Recursive implementation"""
+        if n == 0:
+            return 0
+
+        if n == 1:
+            return 1
+
+        return Fibonacci.fib(n - 2) + Fibonacci.fib(n - 1)
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 def is_between_zero_and_one(x: float, y: float) -> bool:
-    """Return true if the floats x and y exist between 0 and 1 else otherwise"""
+    """Returns true if the floats x and y exist between 0 and 1 else otherwise"""
     return (0 < x < 1) and (0 < y < 1)
 
 
@@ -23,7 +40,7 @@ def is_between_zero_and_one(x: float, y: float) -> bool:
 
 
 def to_binary_string(n: int) -> str:
-    """Return a string representing the binary form of an integer"""
+    """Returns a string representing the binary form of an integer"""
     if n == 1:
         return "1"
 
@@ -50,7 +67,7 @@ def print_two_dm_boolean_array(the_array: [[bool]]) -> None:
 
 
 def print_two_dm_int_array(the_array: [[int]]) -> None:
-    """Print the formatted contents of an int two-dimensional array"""
+    """Prints the formatted contents of an int two-dimensional array"""
     for row in the_array:
         for col in row:
             print(f'[{col}]', end="")
@@ -62,7 +79,7 @@ def print_two_dm_int_array(the_array: [[int]]) -> None:
 
 
 def print_int_array(the_array: [int]) -> None:
-    """Print the formatted contents of an int array"""
+    """Prints the formatted contents of an int array"""
     for item in the_array:
         print(f'{item} ', end="")
 
@@ -71,7 +88,7 @@ def print_int_array(the_array: [int]) -> None:
 
 
 def matrix_transposition(the_matrix: [[int]]) -> [[int]]:
-    """Return the transposition of a matrix"""
+    """Returns the transposition of a matrix"""
     rows = len(the_matrix)
     cols = len(the_matrix[0])  # the number of columns remain constant
 
@@ -99,7 +116,7 @@ def lg(n: float) -> int:
 
 
 def main():
-    """For testing"""
+    """Testing"""
     test_x: float = 0.1
     test_y: float = 0.5
 
@@ -145,6 +162,12 @@ def main():
 
     print()
     print(f"floor of lg(128): { lg(128) }")
+
+    print()
+    print("- Recursive Fib")
+
+    for i in range(40):
+        print(Fibonacci.fib(i))
 
 
 # ---------------------------------------------------------------------------------------------------------
