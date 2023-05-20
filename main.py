@@ -140,6 +140,28 @@ def fact(n: int) -> int:
 # ---------------------------------------------------------------------------------------------------------
 
 
+def binary_search(key: int, the_array: [int]) -> int:
+    return _rank(key, sorted(the_array), 0, len(the_array) - 1)  # works best on sorted arrays
+
+
+def _rank(key: int, the_array: [int], min_index: int, max_index: int) -> int:
+    if min_index > max_index:
+        return -1
+
+    mid_index: int = min_index + (max_index - min_index) // 2
+
+    if the_array[mid_index] == key:
+        return mid_index
+
+    if the_array[mid_index] > key:
+        return _rank(key, the_array, min_index, mid_index - 1)
+
+    return _rank(key, the_array, mid_index + 1, max_index)
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 def main():
     """Testing"""
     test_x: float = 0.1
@@ -199,11 +221,21 @@ def main():
     print()
     print("- Recursive Fib")
 
-    for i in range(40):
+    for i in range(4):
         print(Fibonacci.fib(i))
 
     print()
     print(f"7!: { fact(7) }")
+
+    print()
+    print("- Sorted Array")
+    print_int_array(sorted(test_int_array))
+
+    print()
+    print()
+
+    print("- Binary Search: key = 4")
+    print(f"index: { binary_search(4, test_int_array) }")
 
 
 # ---------------------------------------------------------------------------------------------------------
