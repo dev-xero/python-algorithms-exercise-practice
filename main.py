@@ -1,8 +1,8 @@
 # code based on https://github.com/dev-xero/java-algorithms-exercise-practice
 
 """main.py
-    Python code implementation of some exercises presented in chapter 1.1
-    of the algorithms book
+   Python code implementation of some exercises presented in chapter 1.1
+   of the algorithms book
 """
 
 # ---------------------------------------------------------------------------------------------------------
@@ -87,6 +87,17 @@ def matrix_transposition(the_matrix: [[int]]) -> [[int]]:
 # ---------------------------------------------------------------------------------------------------------
 
 
+def lg(n: float) -> int:
+    """Returns the largest integer not larger than lg(n)"""
+    if n <= 1:
+        return 0
+
+    return lg(n / 2) + 1
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 def main():
     """For testing"""
     test_x: float = 0.1
@@ -103,12 +114,13 @@ def main():
         [6, 5, 2]
     ]
 
+    test_int_array = [5, 7, 6, 9, 3, 8, 2, 4, 1, 10]
+
     test_int_matrix = [[0] * 2 for _ in range(3)]
+
     for i in range(3):
         for j in range(2):
             test_int_matrix[i][j] = generator.randint(0, 9)
-
-    test_int_array = [5, 7, 6, 9, 3, 8, 2, 4, 1, 10]
 
     print(is_between_zero_and_one(test_x, test_y))
     print(to_binary_string(8))
@@ -130,6 +142,9 @@ def main():
     print()
     print("- Transposition")
     print_two_dm_int_array(matrix_transposition(test_int_matrix))
+
+    print()
+    print(f"floor of lg(128): { lg(128) }")
 
 
 # ---------------------------------------------------------------------------------------------------------
