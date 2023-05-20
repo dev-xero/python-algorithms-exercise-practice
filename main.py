@@ -48,6 +48,14 @@ def print_two_dm_int_array(the_array: [[int]]) -> None:
 # ---------------------------------------------------------------------------------------------------------
 
 
+def print_int_array(the_array: [int]) -> None:
+    for item in the_array:
+        print(f'{item} ', end="")
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 def main():
     """For testing"""
     test_x: float = 0.1
@@ -64,6 +72,8 @@ def main():
         [6, 5, 2]
     ]
 
+    test_int_array = [5, 7, 6, 9, 3, 8, 2, 4, 1, 10]
+
     print(is_between_zero_and_one(test_x, test_y))
     print(to_binary_string(8))
     print()
@@ -72,6 +82,9 @@ def main():
     print()
 
     print_two_dm_int_array(test_two_dm_int_array)
+    print()
+
+    print_int_array(test_int_array)
     print()
 
 
