@@ -21,6 +21,7 @@ def to_binary_string(n: int) -> str:
 
 
 def print_two_dm_boolean_array(the_array: [[bool]]) -> None:
+    """Prints the content of a boolean two-dimensional array, '*' for true and ' ' otherwise"""
     for row in the_array:
         for col in row:
             if col:
