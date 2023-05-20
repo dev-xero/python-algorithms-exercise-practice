@@ -49,6 +49,7 @@ def print_two_dm_int_array(the_array: [[int]]) -> None:
 
 
 def print_int_array(the_array: [int]) -> None:
+    """Print the formatted contents of an int array"""
     for item in the_array:
         print(f'{item} ', end="")
 
