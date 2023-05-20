@@ -164,7 +164,7 @@ def _rank(key: int, the_array: [int], min_index: int, max_index: int) -> int:
 # ---------------------------------------------------------------------------------------------------------
 
 
-def brute_fore_search(key: int, the_array: [int], index: int) -> int:
+def brute_force_search(key: int, the_array: [int], index: int) -> int:
     """Returns the index of the key if present, otherwise -1 using brute force search"""
     if index == len(the_array):
         return -1
@@ -172,7 +172,7 @@ def brute_fore_search(key: int, the_array: [int], index: int) -> int:
     if the_array[index] == key:
         return index
 
-    return brute_fore_search(key, the_array, index + 1)
+    return brute_force_search(key, the_array, index + 1)
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -255,7 +255,7 @@ def main():
 
     print()
     print("- Brute Force Search: key = 8")
-    print(f"index: { brute_fore_search(8, sorted(test_int_array), 0) }")
+    print(f"index: { brute_force_search(8, sorted(test_int_array), 0) }")
 
 
 # ---------------------------------------------------------------------------------------------------------
