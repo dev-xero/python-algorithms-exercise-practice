@@ -46,7 +46,7 @@ class Fibonacci:
 
 
 def is_between_zero_and_one(x: float, y: float) -> bool:
-    """Returns true if the floats x and y exist between 0 and 1 else otherwise"""
+    """Returns true if the floats x and y exist between 0 and 1 false otherwise"""
     return (0 < x < 1) and (0 < y < 1)
 
 
