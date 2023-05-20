@@ -4,6 +4,7 @@
 ## Algorithms Implemented
 1. is_between_zero_and_one()
 2. to_binary_string()
+3. print_two_dm_boolean_array()
 
 ## Java Implementation
 These were originally implemented in Java. You can find the source [here](https://github.com/dev-xero/java-algorithms-exercise-practice)
