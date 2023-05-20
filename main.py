@@ -46,7 +46,7 @@ class Fibonacci:
 
 
 def is_between_zero_and_one(x: float, y: float) -> bool:
-    """Returns true if the floats x and y exist between 0 and 1 false otherwise"""
+    """Returns true if the floats x and y exist between 0 and 1, false otherwise"""
     return (0 < x < 1) and (0 < y < 1)
 
 
@@ -102,7 +102,7 @@ def print_int_array(the_array: [int]) -> None:
 
 
 def matrix_transposition(the_matrix: [[int]]) -> [[int]]:
-    """Returns the transposition of a matrix"""
+    """Returns the transpose of a matrix"""
     rows: int = len(the_matrix)
     cols: int = len(the_matrix[0])  # the number of columns remain constant
 
