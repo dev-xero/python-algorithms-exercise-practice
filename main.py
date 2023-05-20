@@ -103,8 +103,8 @@ def print_int_array(the_array: [int]) -> None:
 
 def matrix_transposition(the_matrix: [[int]]) -> [[int]]:
     """Returns the transposition of a matrix"""
-    rows = len(the_matrix)
-    cols = len(the_matrix[0])  # the number of columns remain constant
+    rows: int = len(the_matrix)
+    cols: int = len(the_matrix[0])  # the number of columns remain constant
 
     transposed_matrix = [[0] * rows for _ in range(cols)]
 
@@ -141,10 +141,12 @@ def fact(n: int) -> int:
 
 
 def binary_search(key: int, the_array: [int]) -> int:
+    """Calls _rank() to binary search the_array"""
     return _rank(key, sorted(the_array), 0, len(the_array) - 1)  # works best on sorted arrays
 
 
 def _rank(key: int, the_array: [int], min_index: int, max_index: int) -> int:
+    """Returns the index of the key if present, -1 if not"""
     if min_index > max_index:
         return -1
 
@@ -221,7 +223,7 @@ def main():
     print()
     print("- Recursive Fib")
 
-    for i in range(4):
+    for i in range(40):
         print(Fibonacci.fib(i))
 
     print()
