@@ -37,6 +37,7 @@ def print_two_dm_boolean_array(the_array: [[bool]]) -> None:
 
 
 def print_two_dm_int_array(the_array: [[int]]) -> None:
+    """Print the formatted contents of an int two-dimensional array"""
     for row in the_array:
         for col in row:
             print(f'[{col}]', end="")
