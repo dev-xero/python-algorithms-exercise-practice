@@ -8,6 +8,7 @@
 4. print_two_dm_int_array()
 5. print_int_array()
 6. matrix_transposition()
+7. lg()
 
 ## Java Implementation
 These were originally implemented in Java. You can find the source [here](https://github.com/dev-xero/java-algorithms-exercise-practice)
