@@ -9,6 +9,7 @@
 5. print_int_array()
 6. matrix_transposition()
 7. lg()
+8. Fibonacci.fib()
 
 ## Java Implementation
 These were originally implemented in Java. You can find the source [here](https://github.com/dev-xero/java-algorithms-exercise-practice)
