@@ -10,6 +10,7 @@
 6. matrix_transposition()
 7. lg()
 8. Fibonacci.fib()
+9. Fibonacci.fast_fib()
 
 ## Java Implementation
 These were originally implemented in Java. You can find the source [here](https://github.com/dev-xero/java-algorithms-exercise-practice)
