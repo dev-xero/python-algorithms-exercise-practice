@@ -36,6 +36,17 @@ def print_two_dm_boolean_array(the_array: [[bool]]) -> None:
 # ---------------------------------------------------------------------------------------------------------
 
 
+def print_two_dm_int_array(the_array: [[int]]) -> None:
+    for row in the_array:
+        for col in row:
+            print(f'[{col}]', end="")
+
+        print()
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+
 def main():
     """For testing"""
     test_x: float = 0.1
@@ -47,11 +58,20 @@ def main():
         [True, False]
     ]
 
+    test_two_dm_int_array = [
+        [1, 7, 4],
+        [6, 5, 2]
+    ]
+
     print(is_between_zero_and_one(test_x, test_y))
     print(to_binary_string(8))
     print()
 
     print_two_dm_boolean_array(test_two_dm_boolean_array)
+    print()
+
+    print_two_dm_int_array(test_two_dm_int_array)
+    print()
 
 
 # ---------------------------------------------------------------------------------------------------------
