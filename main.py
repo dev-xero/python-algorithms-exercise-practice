@@ -71,6 +71,7 @@ def print_int_array(the_array: [int]) -> None:
 
 
 def matrix_transposition(the_matrix: [[int]]) -> [[int]]:
+    """Return the transposition of a matrix"""
     rows = len(the_matrix)
     cols = len(the_matrix[0])  # the number of columns remain constant
 
