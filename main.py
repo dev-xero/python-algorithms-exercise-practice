@@ -27,6 +27,20 @@ class Fibonacci:
 
         return Fibonacci.fib(n - 2) + Fibonacci.fib(n - 1)
 
+    @staticmethod
+    def fast_fib(n: int, cache: {int: int}) -> int:
+        """Fibonacci sequence algorithm utilizing dynamic programing and memoization"""
+        if n == 0:
+            cache[n] = 0
+            return 0
+
+        if n == 1:
+            cache[n] = 1
+            return 1
+
+        cache[n] = cache[n - 2] + cache[n - 1]
+        return cache[n]
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -135,6 +149,8 @@ def main():
 
     test_int_matrix = [[0] * 2 for _ in range(3)]
 
+    cache = {}
+
     for i in range(3):
         for j in range(2):
             test_int_matrix[i][j] = generator.randint(0, 9)
@@ -162,6 +178,12 @@ def main():
 
     print()
     print(f"floor of lg(128): { lg(128) }")
+
+    print()
+    print("- Dynamic Programming and Memoization Fib")
+
+    for i in range(40):
+        print(Fibonacci.fast_fib(i, cache))
 
     print()
     print("- Recursive Fib")
